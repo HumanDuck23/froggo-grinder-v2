@@ -1,7 +1,3 @@
-import random
-import re
-
-
 class ModuleBase:
     def __init__(self, config):
         self.config = config
@@ -11,4 +7,3 @@ class ModuleBase:
 
     def onMessageEdit(self, oldMessage, newMessage):
         pass
-    
