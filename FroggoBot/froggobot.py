@@ -8,6 +8,9 @@ import json
 
 class Froggo:
     def __init__(self):
+        # read and parse config
+        self.config = json.loads(open("config.json", "r").read())
+
         self.modules = {
             "autobox": AutoBox(self),
             "autobuy": AutoBuy(self),
@@ -16,20 +19,19 @@ class Froggo:
             "autopizza": AutoPizza(self),
             "balancecheck": BalanceCheck(self),
             "beg": Beg(self),
-            "crime": Crime(self),
+            "crime": Crime(self, self.config["priority"]["crime"]),
             "dig": Dig(self),
             "fish": Fish(self),
             "highlow": HighLow(self),
             "hunt": Hunt(self),
             "postmeme": PostMeme(self),
             "scratch": Scratch(self),
-            "search": Search(self),
+            "search": Search(self, self.config["priority"]["search"]),
             "snakeeyes": SnakeEyes(self),
             "work": Work(self)
         }
 
         # load modules from conf
-        self.config = json.loads(open("config.json", "r").read())
         for module in self.config["modules"].keys():
             if not self.config["modules"][module]:
                 del self.modules[module]
@@ -53,6 +55,7 @@ class Froggo:
 
     def start(self):
         self.active = True
+        Messages.sendMessage(self, "this is a long message")
 
     def stop(self):
         self.active = False

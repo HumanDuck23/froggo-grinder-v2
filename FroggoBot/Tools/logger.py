@@ -5,17 +5,17 @@ init()
 class Logger:
 
     @staticmethod
-    def info(self, text):
-        self._makeMessage("info", text, Fore.CYAN, "", Style.BRIGHT)
+    def info(text):
+        Logger._makeMessage("info", text, Fore.CYAN, "", Style.BRIGHT)
 
     @staticmethod
-    def warn(self, text):
-        self._makeMessage("warn", text, Fore.YELLOW, "", Style.BRIGHT)
+    def warn(text):
+        Logger._makeMessage("warn", text, Fore.YELLOW, "", Style.BRIGHT)
 
     @staticmethod
-    def error(self, text):
-        self._makeMessage("error", text, Fore.RED, "", Style.BRIGHT)
+    def error(text):
+        Logger._makeMessage("error", text, Fore.RED, "", Style.BRIGHT)
 
     @staticmethod
-    def _makeMessage(self, prefix, text, fore, back="", style=""):
+    def _makeMessage(prefix, text, fore, back="", style=""):
         print(f"{fore + back + style}[{Fore.LIGHTWHITE_EX + prefix + fore}] {text}")
