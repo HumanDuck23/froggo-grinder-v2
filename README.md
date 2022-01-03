@@ -8,6 +8,8 @@ Froggo Grinder is a free and open-source [Dank Memer](https://dankmemer.lol) sel
 Froggo is designed to get as much XP as possible, as fast as possible.   
 That way you can get all the sweet leveling rewards!  
   
+### How does Froggo work?
+One of the key features that make Froggo so hard to detect is the more or less complete randomization of basically everything the bot does. The bot types messages at random speeds, it takes a random amount of times to press buttons, it sends the commands in a (only kind of) random order (like a human). Very early prototype versions didn't include lots of randomization, and were blacklisted pretty quick. With the randomization in place, the bot has been able to stay undetected for multiple weeks!
   
 ### Will I get banned for using Froggo?  
 Technically, any kind of automation of a normal user account is against Discord's TOS ([Support Article](https://support.discord.com/hc/en-us/articles/115002192352-Automated-user-accounts-self-bots-)).  However, they will not actively go looking for userbots / selfbots, so they are unlikely to get banned if they don't stress the API (which Froggo does not). So you are most likely to be fine.  
@@ -31,6 +33,7 @@ Using the bot is very simple! When you download the ZIP, one of the two files in
 | channelID | The ID of the channel the bot should use |
 | guildID | The ID of the server the bot should use |
 | WPM | How fast (words per minute) the bot should type |
+
 
 ---
 This project uses Discord-S.C.U.M, an awesome selfbot library for python! <br>  
