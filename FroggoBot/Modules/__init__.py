@@ -1,17 +1,17 @@
-import FroggoBot.Modules.autobox
-import FroggoBot.Modules.autobuy
-import FroggoBot.Modules.autogift
-import FroggoBot.Modules.automoney
-import FroggoBot.Modules.autopizza
-import FroggoBot.Modules.balancecheck
-import FroggoBot.Modules.beg
-import FroggoBot.Modules.crime
-import FroggoBot.Modules.dig
-import FroggoBot.Modules.fish
-import FroggoBot.Modules.highlow
-import FroggoBot.Modules.hunt
-import FroggoBot.Modules.postmeme
-import FroggoBot.Modules.scratch
-import FroggoBot.Modules.search
-import FroggoBot.Modules.snakeeyes
-import FroggoBot.Modules.work
+from FroggoBot.Modules.autobox import AutoBox
+from FroggoBot.Modules.autobuy import AutoBuy
+from FroggoBot.Modules.autogift import AutoGift
+from FroggoBot.Modules.automoney import AutoMoney
+from FroggoBot.Modules.autopizza import AutoPizza
+from FroggoBot.Modules.balancecheck import BalanceCheck
+from FroggoBot.Modules.beg import Beg
+from FroggoBot.Modules.crime import Crime
+from FroggoBot.Modules.dig import Dig
+from FroggoBot.Modules.fish import Fish
+from FroggoBot.Modules.highlow import HighLow
+from FroggoBot.Modules.hunt import Hunt
+from FroggoBot.Modules.postmeme import PostMeme
+from FroggoBot.Modules.scratch import Scratch
+from FroggoBot.Modules.search import Search
+from FroggoBot.Modules.snakeeyes import SnakeEyes
+from FroggoBot.Modules.work import Work

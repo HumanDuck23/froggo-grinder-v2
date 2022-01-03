@@ -1,4 +1,5 @@
 from FroggoBot.Modules import *
+from FroggoBot.Tools import *
 
 import threading
 import discum
@@ -8,23 +9,23 @@ import json
 class Froggo:
     def __init__(self):
         self.modules = {
-            "autobox": autobox.AutoBox(self),
-            "autobuy": autobuy.AutoBuy(self),
-            "autogift": autogift.AutoGift(self),
-            "automoney": automoney.AutoMoney(self),
-            "autopizza": autopizza.AutoPizza(self),
-            "balancecheck": balancecheck.BalanceCheck(self),
-            "beg": beg.Beg(self),
-            "crime": crime.Crime(self),
-            "dig": dig.Dig(self),
-            "fish": fish.Fish(self),
-            "highlow": highlow.HighLow(self),
-            "hunt": hunt.Hunt(self),
-            "postmeme": postmeme.PostMeme(self),
-            "scratch": scratch.Scratch(self),
-            "search": search.Search(self),
-            "snakeeyes": snakeeyes.SnakeEyes(self),
-            "work": work.Work(self)
+            "autobox": AutoBox(self),
+            "autobuy": AutoBuy(self),
+            "autogift": AutoGift(self),
+            "automoney": AutoMoney(self),
+            "autopizza": AutoPizza(self),
+            "balancecheck": BalanceCheck(self),
+            "beg": Beg(self),
+            "crime": Crime(self),
+            "dig": Dig(self),
+            "fish": Fish(self),
+            "highlow": HighLow(self),
+            "hunt": Hunt(self),
+            "postmeme": PostMeme(self),
+            "scratch": Scratch(self),
+            "search": Search(self),
+            "snakeeyes": SnakeEyes(self),
+            "work": Work(self)
         }
 
         # load modules from conf
@@ -49,4 +50,12 @@ class Froggo:
         self.roundThread = None
         self.botGatewayThread = threading.Thread(target=self.bot.gateway.run)
         self.botGatewayThread.start()
-    
+
+    def start(self):
+        self.active = True
+
+    def stop(self):
+        self.active = False
+
+    def pause(self):
+        self.paused = True
