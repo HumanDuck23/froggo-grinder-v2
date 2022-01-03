@@ -3,6 +3,7 @@ from FroggoBot.Tools import *
 
 import threading
 import discum
+import time
 import json
 
 
@@ -55,7 +56,6 @@ class Froggo:
 
     def start(self):
         self.active = True
-        Messages.sendMessage(self, "pls search")
 
     def stop(self):
         self.active = False
