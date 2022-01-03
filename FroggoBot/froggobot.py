@@ -47,4 +47,6 @@ class Froggo:
 
         # threads
         self.roundThread = None
-        self.botGatewayThread = None
+        self.botGatewayThread = threading.Thread(target=self.bot.gateway.run)
+        self.botGatewayThread.start()
+    
