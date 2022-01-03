@@ -1,6 +1,6 @@
 class ModuleBase:
-    def __init__(self, config):
-        self.config = config
+    def __init__(self, froggo):
+        self.froggo = froggo
 
     def onMessage(self, message):
         pass

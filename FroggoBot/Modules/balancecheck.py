@@ -3,8 +3,8 @@ import re
 
 
 class BalanceCheck(modulebase.ModuleBase):
-    def __init__(self, config):
-        super().__init__(config)
+    def __init__(self, froggo):
+        super().__init__(froggo)
         self.wallet = -1
         self.bank = -1
 

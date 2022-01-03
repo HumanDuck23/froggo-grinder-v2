@@ -1,0 +1,17 @@
+import FroggoBot.Modules.autobox
+import FroggoBot.Modules.autobuy
+import FroggoBot.Modules.autogift
+import FroggoBot.Modules.automoney
+import FroggoBot.Modules.autopizza
+import FroggoBot.Modules.balancecheck
+import FroggoBot.Modules.beg
+import FroggoBot.Modules.crime
+import FroggoBot.Modules.dig
+import FroggoBot.Modules.fish
+import FroggoBot.Modules.highlow
+import FroggoBot.Modules.hunt
+import FroggoBot.Modules.postmeme
+import FroggoBot.Modules.scratch
+import FroggoBot.Modules.search
+import FroggoBot.Modules.snakeeyes
+import FroggoBot.Modules.work
