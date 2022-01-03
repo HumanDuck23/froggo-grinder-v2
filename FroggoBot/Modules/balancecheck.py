@@ -11,7 +11,7 @@ class BalanceCheck(modulebase.ModuleBase):
     def onMessage(self, message):
         if message["embeds"]:
             for embed in message["embeds"]:
-                if embed["description"] and embed["title"] and embed["title"].count("'s balance"):
+                if list(embed.keys()).count("title") and embed["description"] and embed["title"].count("'s balance"):
                     pattern = r"\*\*Wallet\*\*: ⏣ (.*)\n\*\*Bank\*\*: ⏣ (.*) / .* `\(.*\)`"
                     search = re.search(pattern, embed["description"])
 

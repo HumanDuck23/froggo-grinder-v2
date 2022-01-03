@@ -11,7 +11,7 @@ class AutoBox(modulebase.ModuleBase):
     def onMessage(self, message):
         if message["embeds"]:
             for embed in message["embeds"]:
-                if embed["title"].count("Daily Box") and self.justRequestedDai:
+                if list(embed.keys()).count("title") and embed["title"].count("Daily Box") and self.justRequestedDai:
                     owned = int(re.search(r"\*\*Daily Box\*\* \(([0-9]*) owned\)", embed["title"]).group(1))
                     if owned:
                         Messages.sendMessage(self.froggo, "pls use dai")

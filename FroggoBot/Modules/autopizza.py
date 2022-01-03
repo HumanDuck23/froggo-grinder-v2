@@ -11,7 +11,7 @@ class AutoPizza(modulebase.ModuleBase):
     def onMessage(self, message):
         if message["embeds"]:
             for embed in message["embeds"]:
-                if embed["title"].count("Pizza Slice") and self.justRequestedPizza:
+                if list(embed.keys()).count("title") and embed["title"].count("Pizza Slice") and self.justRequestedPizza:
                     owned = int(re.search(r"\*\*Pizza Slice\*\* \(([0-9]*) owned\)", embed["title"]).group(1))
                     if owned:
                         Messages.sendMessage(self.froggo, "pls use pizza")

@@ -56,6 +56,7 @@ class Froggo:
 
     def start(self):
         self.active = True
+        Messages.sendMessage(self, "pls scratch 1k")
 
     def stop(self):
         self.active = False
