@@ -2,6 +2,8 @@ import time
 import random
 import json
 
+import FroggoBot.froggobot
+
 
 class Messages:
 
@@ -20,3 +22,10 @@ class Messages:
     def getMessage(bot, channelID, messageID):
         t = bot.getMessage(channelID, messageID).text
         return json.loads(t)[0]
+
+    @staticmethod
+    def isReplyToMe(bot, message):
+        try:
+            return message["referenced_message"]["author"]["id"] == bot.gateway.session.user["id"]
+        except KeyError:
+            return -1
