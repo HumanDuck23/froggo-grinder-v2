@@ -55,7 +55,7 @@ class Froggo:
 
     def start(self):
         self.active = True
-        Messages.sendMessage(self, "this is a long message")
+        Messages.sendMessage(self, "pls search")
 
     def stop(self):
         self.active = False
