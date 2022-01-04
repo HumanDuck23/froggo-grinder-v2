@@ -29,12 +29,12 @@ class Work(modulebase.ModuleBase):
                     buttons = Buttons.parseButtons(nMsg["components"])
                     buttonsToClick = work[0](message["content"], buttons, nMsg["content"])
                     if type(buttonsToClick) == list:
-                        for button in buttons:
+                        for button in buttonsToClick:
                             time.sleep(random.randint(1, 3))
                             Buttons.clickButton(self.froggo, button, nMsg)
                     else:
                         time.sleep(random.randint(1, 3))
-                        Buttons.clickButton(self.froggo, buttons, nMsg)
+                        Buttons.clickButton(self.froggo, buttonsToClick, nMsg)
 
                     self.froggo.paused = False
                     Logger.info("Resuming bot round...")
