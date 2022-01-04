@@ -47,8 +47,9 @@ class Froggo:
         def a(msg):
             if msg.raw["t"] == "MESSAGE_CREATE":
                 msg = msg.parsed.auto()
-                for module in self.modules.keys():
-                    self.modules[module].onMessage(msg)
+                if msg["author"]["id"] == self.config["bot"]["dankID"] and msg["channel_id"] == self.config["bot"]["channelID"]:
+                    for module in self.modules.keys():
+                        self.modules[module].onMessage(msg)
 
         # threads
         self.roundThread = None

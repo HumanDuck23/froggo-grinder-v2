@@ -18,6 +18,8 @@ class AutoPizza(modulebase.ModuleBase):
                         self.froggo.paused = False
                         Scheduler.setTimeout(self.usePizza, 3.6e+6)  # use the next pizza in 1h
                         Logger.info("Used pizza, using again in 1 hour.")
+                    else:
+                        self.froggo.paused = False
 
     def usePizza(self):
         self.froggo.paused = True

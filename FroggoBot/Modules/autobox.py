@@ -18,6 +18,8 @@ class AutoBox(modulebase.ModuleBase):
                         self.froggo.paused = False
                         Scheduler.setTimeout(self.useBox, 600000) # use the next box in 10 mins
                         Logger.info("Used daily box, using again in 10 minutes.")
+                    else:
+                        self.froggo.paused = False
 
     def useBox(self):
         self.froggo.paused = True
