@@ -1,1 +1,73 @@
-{}
+{
+  "modules": {
+    "autobox": true,
+    "autobuy": true,
+    "autogift": true,
+    "automoney": true,
+    "autopizza": true
+  },
+  "commands": {
+    "fish": [
+      0,
+      1
+    ],
+    "hunt": [
+      0,
+      1
+    ],
+    "beg": [
+      0,
+      1
+    ],
+    "dig": [
+      0,
+      1
+    ],
+    "search": [
+      2,
+      5
+    ],
+    "crime": [
+      2,
+      5
+    ],
+    "highlow": [
+      1,
+      3
+    ],
+    "postmeme": [
+      2,
+      3
+    ],
+    "snakeeyes 1k": [
+      1,
+      2
+    ],
+    "scratch 1k": [
+      4,
+      6
+    ],
+    "dep max": [
+      1,
+      2
+    ]
+  },
+  "priority": {
+    "search": [
+      "garage",
+      "grass",
+      "shoe"
+    ],
+    "crime": [
+      "tax evasion"
+    ]
+  },
+  "bot": {
+    "token": "--TOKEN--",
+    "channelID": "--CHANNEL ID--",
+    "guildID": "--GUILD ID--",
+    "WPM": 90,
+    "dankID": "270904126974590976",
+    "lastWorked": null
+  }
+}
