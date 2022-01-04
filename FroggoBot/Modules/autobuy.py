@@ -1,5 +1,5 @@
 from FroggoBot.Modules.ModuleBase import modulebase
-from FroggoBot.Tools import Messages
+from FroggoBot.Tools import Messages, Logger
 
 
 class AutoBuy(modulebase.ModuleBase):
@@ -13,3 +13,4 @@ class AutoBuy(modulebase.ModuleBase):
         for e in items.keys():
             if message["content"].count(e) and Messages.isReplyToMe(self.froggo, message):
                 Messages.sendMessage("pls buy " + items[e])
+                Logger.info("Bought " + items[e] + ".")

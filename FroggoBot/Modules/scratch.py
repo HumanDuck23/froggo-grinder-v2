@@ -1,5 +1,5 @@
 from FroggoBot.Modules.ModuleBase import modulebase
-from FroggoBot.Tools import Buttons
+from FroggoBot.Tools import Buttons, Logger
 import random
 import time
 
@@ -18,6 +18,9 @@ class Scratch(modulebase.ModuleBase):
                                 l.append(btn)
                                 break
 
+                    x = 0
                     for button in l:
                         time.sleep(random.randint(1, 2))
                         Buttons.clickButton(self.froggo, button, message)
+                        Logger.info("Scratched field #" + str(x))
+                        x += 1

@@ -1,5 +1,5 @@
 from FroggoBot.Modules.ModuleBase import modulebase
-from FroggoBot.Tools import Messages, Scheduler
+from FroggoBot.Tools import Messages, Scheduler, Logger
 import re
 
 
@@ -17,6 +17,7 @@ class AutoBox(modulebase.ModuleBase):
                         Messages.sendMessage(self.froggo, "pls use dai")
                         self.froggo.paused = False
                         Scheduler.setTimeout(self.useBox, 600000) # use the next box in 10 mins
+                        Logger.info("Used daily box, using again in 10 minutes.")
 
     def useBox(self):
         self.froggo.paused = True

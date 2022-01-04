@@ -1,7 +1,8 @@
 from FroggoBot.Modules.ModuleBase import modulebase
-from FroggoBot.Tools import Buttons
+from FroggoBot.Tools import Buttons, Logger
 import random
 import time
+
 
 class PostMeme(modulebase.ModuleBase):
     def onMessage(self, message):
@@ -9,4 +10,6 @@ class PostMeme(modulebase.ModuleBase):
             if embed["description"] is not None:
                 if embed["description"].lower().count("pick a meme"):
                     time.sleep(random.randint(1, 2))
-                    Buttons.clickButton(self.froggo, random.choice((Buttons.parseButtons(message["components"]))), message)
+                    btn = random.choice((Buttons.parseButtons(message["components"])))
+                    Buttons.clickButton(self.froggo, btn, message)
+                    Logger.info("Posted a meme: " + btn["label"] + ".")

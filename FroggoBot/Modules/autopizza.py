@@ -1,5 +1,5 @@
 from FroggoBot.Modules.ModuleBase import modulebase
-from FroggoBot.Tools import Messages, Scheduler
+from FroggoBot.Tools import Messages, Scheduler, Logger
 import re
 
 
@@ -17,6 +17,7 @@ class AutoPizza(modulebase.ModuleBase):
                         Messages.sendMessage(self.froggo, "pls use pizza")
                         self.froggo.paused = False
                         Scheduler.setTimeout(self.usePizza, 3.6e+6)  # use the next pizza in 1h
+                        Logger.info("Used pizza, using again in 1 hour.")
 
     def usePizza(self):
         self.froggo.paused = True

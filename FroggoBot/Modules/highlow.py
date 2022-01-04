@@ -1,5 +1,5 @@
 from FroggoBot.Modules.ModuleBase import modulebase
-from FroggoBot.Tools import Buttons
+from FroggoBot.Tools import Buttons, Logger
 import random
 import time
 import re
@@ -16,12 +16,18 @@ class HighLow(modulebase.ModuleBase):
                         if hint <= 45:
                             time.sleep(random.randint(1, 2))
                             Buttons.clickButton(self.froggo, buttons[2], message)
+                            Logger.info("Pressed " + buttons[2]["label"] + ".")
                         elif hint >= 55:
                             time.sleep(random.randint(1, 2))
                             Buttons.clickButton(self.froggo, buttons[0], message)
+                            Logger.info("Pressed " + buttons[0]["label"] + ".")
                         else:
                             time.sleep(random.randint(1, 2))
-                            Buttons.clickButton(self.froggo, random.choice(buttons), message)
+                            btn = random.choice(buttons)
+                            Buttons.clickButton(self.froggo, btn, message)
+                            Logger.info("Pressed " + btn["label"] + ".")
                     else:
                         time.sleep(random.randint(1, 2))
-                        Buttons.clickButton(self.froggo, random.choice(buttons), message)
+                        btn = random.choice(buttons)
+                        Buttons.clickButton(self.froggo, btn, message)
+                        Logger.info("Pressed " + btn["label"] + ".")

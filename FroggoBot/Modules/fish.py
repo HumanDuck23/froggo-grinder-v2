@@ -1,5 +1,5 @@
 from FroggoBot.Modules.ModuleBase import modulebase
-from FroggoBot.Tools import Buttons, Messages
+from FroggoBot.Tools import Buttons, Messages, Logger
 import random
 import time
 
@@ -18,3 +18,4 @@ class Fish(modulebase.ModuleBase):
                 Buttons.clickButton(self.froggo, buttons[2], nMsg)
             else:
                 Buttons.clickButton(self.froggo, buttons[0], nMsg)
+            Logger.info("Caught kraken/legendary fish.")

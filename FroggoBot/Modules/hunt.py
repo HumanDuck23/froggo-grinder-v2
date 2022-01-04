@@ -1,5 +1,5 @@
 from FroggoBot.Modules.ModuleBase import modulebase
-from FroggoBot.Tools import Buttons, Messages
+from FroggoBot.Tools import Buttons, Messages, Logger
 import random
 import time
 
@@ -18,3 +18,5 @@ class Hunt(modulebase.ModuleBase):
                 Buttons.clickButton(self.froggo, buttons[random.choice([0, 1])], nMsg)
             else:
                 Buttons.clickButton(self.froggo,  buttons[random.choice([1, 2])], nMsg)
+
+            Logger.info("Caught dragon.")
