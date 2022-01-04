@@ -40,8 +40,8 @@ Here's a list of the modules you can disable/enable and what they do:
 | ----------- | ----------- |
 | autobox | Automatically uses a daily box every 10 minutes |
 | autobuy | Automatically buy an item when you need it (fishingpole, rifle, etc.) |
-| autogift | Automatically gift you rare items it obtains (work items, dragon, etc.) |
-| automoney | Automatically give you most of the money it earns |
+| autogift[^1] | Automatically gift you rare items it obtains (work items, dragon, etc.) |
+| automoney[^1] | Automatically give you most of the money it earns |
 | autopizza | Automatically eats a pizza slice every hour |
 
 ---
@@ -49,3 +49,5 @@ This project uses Discord-S.C.U.M, an awesome selfbot library for python! <br>
 GitHub: https://github.com/Merubokkusu/Discord-S.C.U.M
 
 Froggo was also inspired by a very cool dank memer automation program that is sadly no longer maintained: [Dank Grinder](https://github.com/V4NSH4J/dankgrinder/) and it's parent [Dank Grinder](https://github.com/dankgrinder/dankgrinder)
+
+[^1]: Not implemented yet. Keep an eye out for future updates!
