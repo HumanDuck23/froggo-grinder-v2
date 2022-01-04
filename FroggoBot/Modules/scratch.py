@@ -19,5 +19,5 @@ class Scratch(modulebase.ModuleBase):
                                 break
 
                     for button in l:
-                        time.sleep(random.randint(1, 3))
+                        time.sleep(random.randint(1, 2))
                         Buttons.clickButton(self.froggo, button, message)

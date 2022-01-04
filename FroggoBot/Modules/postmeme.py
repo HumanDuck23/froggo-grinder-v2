@@ -8,5 +8,5 @@ class PostMeme(modulebase.ModuleBase):
         for embed in message["embeds"]:
             if embed["description"] is not None:
                 if embed["description"].lower().count("pick a meme"):
-                    time.sleep(random.randint(1, 3))
+                    time.sleep(random.randint(1, 2))
                     Buttons.clickButton(self.froggo, random.choice((Buttons.parseButtons(message["components"]))), message)

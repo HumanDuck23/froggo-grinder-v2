@@ -16,5 +16,5 @@ class Search(modulebase.ModuleBase):
             btn = Buttons.getButtonWithPriority(self.priority, message)
             for button in btn:
                 if Messages.isReplyToMe(self.froggo, message):
-                    time.sleep(random.randint(1, 3))
+                    time.sleep(random.randint(1, 2))
                     Buttons.clickButton(self.froggo, button, message)

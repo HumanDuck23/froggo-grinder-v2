@@ -14,14 +14,14 @@ class HighLow(modulebase.ModuleBase):
                     buttons = Buttons.parseButtons(message["components"])
                     if hint:
                         if hint <= 45:
-                            time.sleep(random.randint(1, 3))
+                            time.sleep(random.randint(1, 2))
                             Buttons.clickButton(self.froggo, buttons[2], message)
                         elif hint >= 55:
-                            time.sleep(random.randint(1, 3))
+                            time.sleep(random.randint(1, 2))
                             Buttons.clickButton(self.froggo, buttons[0], message)
                         else:
-                            time.sleep(random.randint(1, 3))
+                            time.sleep(random.randint(1, 2))
                             Buttons.clickButton(self.froggo, random.choice(buttons), message)
                     else:
-                        time.sleep(random.randint(1, 3))
+                        time.sleep(random.randint(1, 2))
                         Buttons.clickButton(self.froggo, random.choice(buttons), message)
