@@ -95,8 +95,8 @@ class Froggo:
 
     def start(self):
         self.active = True
-        self.modules["autobox"].useBox()
-        self.modules["autopizza"].usePizza()
+        #self.modules["autobox"].useBox()
+        #self.modules["autopizza"].usePizza()
         self.runRound()
 
     def stop(self):

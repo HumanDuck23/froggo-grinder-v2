@@ -17,7 +17,7 @@ Being blacklisted from Dank Memer is a different question. I have used this bot 
 so you'll probably be fine, as it is designed to look like a human.  
   
 ### Where can I download it?  
-Nowhere yet, there will be a download link once Froggo is released!  
+To run the bot, all you need to do is download this repo as a zip, extract it and run main.py! You need to have [Python 3](https://www.python.org) installed for it to work
   
 ### How do I get the most XP?  
 Since a recent update Dank Memer gives double XP on weekends. This makes them the perfect opportunity for the bot! Make sure to give it pizza slices and/or daily boxes for the fastest possible grinding. You can also make the account it's running on eat cheese for an extra XP multi. With ~20 cheese eaten, pizzas and daily boxes the bot can get up to 600 levels in around 8-10 hours!  
