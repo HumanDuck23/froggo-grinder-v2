@@ -34,6 +34,15 @@ Using the bot is very simple! When you download the ZIP, one of the two files in
 | guildID | The ID of the server the bot should use |
 | WPM | How fast (words per minute) the bot should type |
 
+Here's a list of the modules you can disable/enable and what they do:
+
+| Name | Description |
+| ----------- | ----------- |
+| autobox | Automatically uses a daily box every 10 minutes |
+| autobuy | Automatically buy an item when you need it (fishingpole, rifle, etc.) |
+| autogift | Automatically gift you rare items it obtains (work items, dragon, etc.) |
+| automoney | Automatically give you most of the money it earns |
+| autopizza | Automatically eats a pizza slice every hour |
 
 ---
 This project uses Discord-S.C.U.M, an awesome selfbot library for python! <br>  
