@@ -7,7 +7,7 @@ import time
 class Scratch(modulebase.ModuleBase):
     def onMessage(self, message):
         for embed in message["embeds"]:
-            if embed["description"] is not None:
+            if list(embed.keys()).count("description"):
                 if embed["description"].lower().count("you can scratch"):
                     buttonList = Buttons.parseButtons(message["components"])
                     l = []

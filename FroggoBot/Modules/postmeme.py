@@ -7,7 +7,7 @@ import time
 class PostMeme(modulebase.ModuleBase):
     def onMessage(self, message):
         for embed in message["embeds"]:
-            if embed["description"] is not None:
+            if list(embed.keys()).count("description"):
                 if embed["description"].lower().count("pick a meme"):
                     time.sleep(random.randint(1, 2))
                     btn = random.choice((Buttons.parseButtons(message["components"])))
