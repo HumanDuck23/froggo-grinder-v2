@@ -54,6 +54,11 @@
   },
   "priority": {
     "search": [
+      "soul's chamber",
+      "kitchen",
+      "aeradella's home",
+      "god's own place",
+      "phoenix pits",
       "garage",
       "grass",
       "shoe"
@@ -68,6 +73,6 @@
     "guildID": "--GUILD ID--",
     "WPM": 90,
     "dankID": "270904126974590976",
-    "lastWorked": null
+    "lastWorked": 1641718210.9002297
   }
 }
