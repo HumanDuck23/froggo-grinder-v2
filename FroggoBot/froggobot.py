@@ -58,12 +58,13 @@ class Froggo:
 
     def runRound(self):
         if self.active:
+            """
             if self.config["bot"]["lastWorked"] is None or (int(self.config["bot"]["lastWorked"]) + 60 * 60) < time.time():
                 self.paused = True
                 Messages.sendMessage(self, "pls work")
                 self.config["bot"]["lastWorked"] = time.time()
                 self.writeConfig()
-
+            """
             commands = self.config["commands"]
             r = []
             for command in commands.keys():
@@ -95,8 +96,10 @@ class Froggo:
 
     def start(self):
         self.active = True
-        #self.modules["autobox"].useBox()
-        #self.modules["autopizza"].usePizza()
+        self.modules["autobox"].useBox()
+        time.sleep(5)
+        self.modules["autopizza"].usePizza()
+        time.sleep(5)
         self.runRound()
 
     def stop(self):
